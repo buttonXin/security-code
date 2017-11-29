@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/TimeButtonDemo.iml" filepath="$PROJECT_DIR$/TimeButtonDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/security-code.iml" filepath="$PROJECT_DIR$/security-code.iml" />
     </modules>
   </component>
 </project>

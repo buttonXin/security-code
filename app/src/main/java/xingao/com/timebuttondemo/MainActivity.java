@@ -7,26 +7,44 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+    private VerificationCodeButton mVerificationCodeButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        final SecurityButton securityButton = (SecurityButton) findViewById(R.id.bnt_time);
+        mVerificationCodeButton = (VerificationCodeButton) findViewById(R.id.bnt_time);
 
-        //这是直接调用方法
-        /*securityButton.setOnClickListener(new View.OnClickListener() {
+
+//        verificationCodeButton.setSumTime(60 , 5);
+
+        mVerificationCodeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                securityButton.start();
-            }
-        });*/
-
-        //这是回调使用方法
-        securityButton.setStartTime(new SecurityButton.StartTimeLIstener() {
-            @Override
-            public void onStart() {
-                Toast.makeText(getApplicationContext() , "start" , Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity.this, "oooo", Toast.LENGTH_SHORT).show();
             }
         });
+
+
+        findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mVerificationCodeButton.start();
+            }
+        });
+        findViewById(R.id.button2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mVerificationCodeButton.stop();
+            }
+        });
+    }
+
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+
+        mVerificationCodeButton.stop();
     }
 }
