@@ -10,11 +10,11 @@
   >mVerificationCodeButton = (VerificationCodeButton) findViewById(R.id.bnt_time);
   //创建view 直接setOnClickListener就行
   >mVerificationCodeButton.setOnClickListener(new View.OnClickListener() {
-              @Override
-              public void onClick(View v) {
-                  Toast.makeText(MainActivity.this, "发送成功", Toast.LENGTH_SHORT).show();
-              }
-          });
+  >            @Override
+  >            public void onClick(View v) {
+  >                Toast.makeText(MainActivity.this, "发送成功", Toast.LENGTH_SHORT).show();
+  >            }
+  >        });
 
   //或者在别的地方调用start 就可以开始倒计时
   > mVerificationCodeButton.start();
